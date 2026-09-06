@@ -12,9 +12,9 @@ export function ContactClient({ whatsappNumber }: { whatsappNumber: string }) {
   const { t } = useLanguage();
 
   const channels = [
-    { icon: Phone, label: "WhatsApp", value: `+${whatsappNumber || "1 (555) 018-6688"}`, href: waLink(whatsappNumber, t("hero.waPrefix")), color: "bg-green-100 text-green-700" },
+    { icon: Phone, label: "WhatsApp", value: `+${whatsappNumber || "852 6513 1587"}`, href: waLink(whatsappNumber, t("hero.waPrefix")), color: "bg-green-100 text-green-700" },
     { icon: MessageCircle, label: t("contact.wechat"), value: "JSTang2024", href: undefined, color: "bg-emerald-100 text-emerald-700" },
-    { icon: Mail, label: t("contact.email"), value: "service@mengshijishantang.com", href: "mailto:service@mengshijishantang.com", color: "bg-amber-100 text-amber-700" },
+    { icon: Mail, label: t("contact.email"), value: "mengzhongqiu98@gmail.com", href: "mailto:mengzhongqiu98@gmail.com", color: "bg-amber-100 text-amber-700" },
     { icon: Clock, label: t("contact.hours"), value: "24h · Mon-Sat", href: undefined, color: "bg-stone-100 text-stone-700" },
   ];
 
@@ -86,9 +86,26 @@ export function ContactClient({ whatsappNumber }: { whatsappNumber: string }) {
           </a>
         </div>
 
-        <div className="mt-8 flex items-start gap-3 text-stone-500 text-sm">
-          <MapPin className="w-5 h-5 flex-shrink-0 text-red-800 mt-0.5" />
-          <p>{t("footer.addr")}</p>
+        <div className="mt-8 bg-white rounded-2xl border border-stone-200 p-6">
+          <div className="flex items-start gap-3 mb-4">
+            <MapPin className="w-5 h-5 flex-shrink-0 text-red-800 mt-0.5" />
+            <h3 className="font-bold text-stone-900">{t("contact.address")}</h3>
+          </div>
+          <div className="space-y-3 text-stone-700 pl-8">
+            <div>
+              <div className="font-semibold text-stone-900">🇭🇰 香港办事处</div>
+              <div className="text-sm">香港九龙旺角弥敦道 700 号</div>
+            </div>
+            <div>
+              <div className="font-semibold text-stone-900">🇨🇳 大陆总部</div>
+              <div className="text-sm">山东省济南市历城区花园路 176 号</div>
+            </div>
+            <div className="pt-2 border-t border-stone-100">
+              <div className="text-sm"><span className="font-semibold">{t("contact.manager")}：</span>孟经理</div>
+              <div className="text-sm"><span className="font-semibold">{t("contact.phone")}：</span>+852 6513 1587</div>
+              <div className="text-sm"><span className="font-semibold">{t("contact.email")}：</span>mengzhongqiu98@gmail.com</div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-6 text-center">

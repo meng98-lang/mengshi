@@ -32,7 +32,12 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
             </p>
             <div className="flex items-start gap-2 mt-4 text-sm text-stone-400">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-              <span>{t("footer.address")}</span>
+              <span className="whitespace-pre-line">{t("footer.address")}</span>
+            </div>
+            <div className="mt-3 text-sm text-stone-400 space-y-1">
+              <div>{t("footer.manager")}</div>
+              <div>{t("footer.phone")}</div>
+              <div>{t("footer.email")}</div>
             </div>
           </div>
 

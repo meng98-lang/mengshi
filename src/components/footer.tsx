@@ -62,6 +62,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
               {t("footer.company")}
             </h3>
             <ul className="space-y-2.5 text-sm">
+              <li><Link href="/charity" className="hover:text-amber-200 transition-colors">{t("footer.charity")}</Link></li>
               <li><Link href="/heritage" className="hover:text-amber-200 transition-colors">{t("footer.heritage")}</Link></li>
               <li><Link href="/about" className="hover:text-amber-200 transition-colors">{t("footer.about")}</Link></li>
               <li><Link href="/products" className="hover:text-amber-200 transition-colors">{t("nav.products")}</Link></li>

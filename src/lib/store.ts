@@ -53,7 +53,7 @@ export interface SiteSettings {
 
 const DEFAULT_SETTINGS: SiteSettings = {
   siteName: "百年孟氏济善堂参茸商行",
-  whatsappNumber: "8613800000000",
+  whatsappNumber: "85265131587",
   whatsappMessage: "您好，我对贵店药材有兴趣，想咨询订购。",
   adminPassword: "mengshi2024",
   currency: "USD",
@@ -81,6 +81,11 @@ interface RawProduct {
 }
 
 // ---------- 设置 ----------
+// 规范化 WhatsApp 号码：只保留数字（去掉 +、空格、连字符等），供 wa.me 链接使用
+function normalizeWa(raw: string): string {
+  return (raw || "").replace(/[^0-9]/g, "");
+}
+
 export async function getSettings(): Promise<SiteSettings> {
   try {
     const client = getSupabaseClient();
@@ -104,7 +109,7 @@ export async function getSettings(): Promise<SiteSettings> {
     }
     return {
       siteName: data.site_name ?? DEFAULT_SETTINGS.siteName,
-      whatsappNumber: data.whatsapp_number ?? DEFAULT_SETTINGS.whatsappNumber,
+      whatsappNumber: normalizeWa(data.whatsapp_number ?? DEFAULT_SETTINGS.whatsappNumber),
       whatsappMessage:
         data.whatsapp_message ?? DEFAULT_SETTINGS.whatsappMessage,
       adminPassword: data.admin_password ?? DEFAULT_SETTINGS.adminPassword,

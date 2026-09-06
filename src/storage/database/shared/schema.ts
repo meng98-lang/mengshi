@@ -151,7 +151,7 @@ export const maxplusClicks = pgTable("maxplus_clicks", {
 export const msSettings = pgTable("ms_settings", {
 	id: integer().default(1).primaryKey().notNull(),
 	site_name: text("site_name").default('百年孟氏济善堂参茸商行'),
-	whatsapp_number: text("whatsapp_number").default('8613800000000'),
+	whatsapp_number: text("whatsapp_number").default('85265131587'),
 	whatsapp_message: text("whatsapp_message").default('您好，我对贵店药材有兴趣。'),
 	admin_password: text("admin_password").default('mengshi2024'),
 	currency: text("currency").default('USD'),

@@ -110,13 +110,14 @@ export function CharityClient({ whatsappNumber }: { whatsappNumber: string }) {
           <div className="max-w-3xl mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-4xl font-black mb-4">{t("charity.cta.title")}</h2>
             <p className="text-amber-50 text-lg mb-8">{t("charity.cta.desc")}</p>
-            <Link
-              href={whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t("order.message"))}` : "/contact"}
-              target={whatsappNumber ? "_blank" : undefined}
+            <a
+              href={`https://wa.me/${(whatsappNumber || "85265131587").replace(/[^0-9]/g, "")}?text=${encodeURIComponent(t("order.message"))}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-red-800 rounded-full font-bold text-lg hover:bg-amber-50 transition-colors shadow-lg"
             >
               <MessageCircle className="w-6 h-6" /> {t("charity.cta.button")}
-            </Link>
+            </a>
           </div>
         </section>
       </main>

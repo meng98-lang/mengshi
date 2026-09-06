@@ -17,7 +17,8 @@ export function ProductCard({
   const waMsg = encodeURIComponent(
     `${t("order.product")}: ${product.name} (${product.unit})`
   );
-  const waLink = `https://wa.me/${whatsappNumber}?text=${waMsg}`;
+  const waNum = (whatsappNumber || "85265131587").replace(/[^0-9]/g, "");
+  const waLink = `https://wa.me/${waNum}?text=${waMsg}`;
   const img = product.images[0] || "/images/ejiao.jpg";
 
   return (

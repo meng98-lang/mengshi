@@ -60,7 +60,7 @@ export function Header({ whatsappNumber }: { whatsappNumber: string }) {
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={`https://wa.me/${(whatsappNumber || "85265131587").replace(/[^0-9]/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 px-4 py-2.5 bg-red-800 hover:bg-red-900 text-amber-50 rounded-lg text-sm font-semibold transition-colors shadow"
@@ -94,7 +94,7 @@ export function Header({ whatsappNumber }: { whatsappNumber: string }) {
               </Link>
             ))}
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={`https://wa.me/${(whatsappNumber || "85265131587").replace(/[^0-9]/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 flex items-center justify-center gap-2 px-4 py-3 bg-red-800 text-amber-50 rounded-lg font-semibold"

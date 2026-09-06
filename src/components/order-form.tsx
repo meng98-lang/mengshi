@@ -110,7 +110,7 @@ export function OrderForm({
           {t("order.estimatedTotal")}: <span className="font-bold text-red-800">${total.toFixed(2)}</span>
         </p>
         <a
-          href={`https://wa.me/${whatsappNumber}?text=${waText}`}
+          href={`https://wa.me/${(whatsappNumber || "85265131587").replace(/[^0-9]/g, "")}?text=${waText}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-[#1da851] text-white rounded-lg font-semibold"

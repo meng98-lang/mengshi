@@ -12,7 +12,7 @@ export function ContactClient({ whatsappNumber }: { whatsappNumber: string }) {
   const { t } = useLanguage();
 
   const channels = [
-    { icon: Phone, label: "WhatsApp", value: `+${whatsappNumber || "852 6513 1587"}`, href: waLink(whatsappNumber, t("hero.waPrefix")), color: "bg-green-100 text-green-700" },
+    { icon: Phone, label: "WhatsApp", value: `+${whatsappNumber || "85265131587"}`, href: waLink(whatsappNumber, t("hero.waPrefix")), color: "bg-green-100 text-green-700" },
     { icon: MessageCircle, label: t("contact.wechat"), value: "JSTang2024", href: undefined, color: "bg-emerald-100 text-emerald-700" },
     { icon: Mail, label: t("contact.email"), value: "mengzhongqiu98@gmail.com", href: "mailto:mengzhongqiu98@gmail.com", color: "bg-amber-100 text-amber-700" },
     { icon: Clock, label: t("contact.hours"), value: "24h · Mon-Sat", href: undefined, color: "bg-stone-100 text-stone-700" },

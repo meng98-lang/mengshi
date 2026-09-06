@@ -76,7 +76,7 @@ export function Footer({ whatsappNumber }: { whatsappNumber: string }) {
               {t("footer.contact")}
             </h3>
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={`https://wa.me/${(whatsappNumber || "85265131587").replace(/[^0-9]/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#1da851] text-white rounded-lg text-sm font-semibold transition-colors"

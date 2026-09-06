@@ -39,7 +39,8 @@ export function ProductDetailClient({
   const waMsg = encodeURIComponent(
     `${t("order.product")}: ${product.name} (${product.unit})`
   );
-  const waLink = `https://wa.me/${whatsappNumber}?text=${waMsg}`;
+  const waNum = (whatsappNumber || "85265131587").replace(/[^0-9]/g, "");
+  const waLink = `https://wa.me/${waNum}?text=${waMsg}`;
   const related = products.filter((p) => p.id !== product.id).slice(0, 3);
 
   return (

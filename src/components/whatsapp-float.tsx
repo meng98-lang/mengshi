@@ -3,9 +3,11 @@
 import { MessageCircle } from "lucide-react";
 
 export function WhatsappFloat({ whatsappNumber }: { whatsappNumber: string }) {
+  // 规范化为纯数字，空值时使用默认号码
+  const num = (whatsappNumber || "").replace(/[^0-9]/g, "") || "85265131587";
   return (
     <a
-      href={`https://wa.me/${whatsappNumber}`}
+      href={`https://wa.me/${num}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp 咨询"

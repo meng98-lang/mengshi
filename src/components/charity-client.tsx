@@ -22,6 +22,21 @@ export function CharityClient() {
       title: t["charity.event3.title"],
       desc: t["charity.event3.desc"],
     },
+    {
+      image: "/images/charity-mountain-medical.jpg",
+      title: t["charity.event4.title"],
+      desc: t["charity.event4.desc"],
+    },
+    {
+      image: "/images/charity-mountain-ginseng.jpg",
+      title: t["charity.event5.title"],
+      desc: t["charity.event5.desc"],
+    },
+    {
+      image: "/images/charity-mountain-nursing.jpg",
+      title: t["charity.event6.title"],
+      desc: t["charity.event6.desc"],
+    },
   ];
 
   return (

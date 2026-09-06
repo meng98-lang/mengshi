@@ -76,19 +76,19 @@
     "@types/pg": "^8.16.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4"
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.3",
+    "stylelint": "^16.4.0",
+    "stylelint-config-standard": "^38.0.0"
   },
   "devDependencies": {
     "@react-dev-inspector/babel-plugin": "^2.0.1",
     "@react-dev-inspector/middleware": "^2.0.1",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.3",
     "only-allow": "^1.2.2",
     "react-dev-inspector": "^2.0.1",
     "shadcn": "latest",
-    "stylelint": "^16.4.0",
-    "stylelint-config-standard": "^38.0.0",
-    "tailwindcss": "^4",
     "tsup": "^8.3.5",
     "tsx": "^4.19.2"
   },
